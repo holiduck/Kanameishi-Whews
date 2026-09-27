@@ -1,0 +1,22 @@
+Kanameishi-Whews（要石-WHEWS）
+==============================
+
+本软件是下列项目的非官方二次开发（fork）：
+
+  要石 kanameishi
+  https://github.com/Lipomoea/kanameishi
+  Copyright (C) Lipomoea and contributors
+  Licensed under the GNU Affero General Public License v3.0 (AGPL-3.0)
+
+本 fork 的修改（含 WHEWS API 对接等）同样以 AGPL-3.0 授权。
+完整许可文本见 LICENSE。
+
+本项目与上游要石作者无隶属或背书关系。分发或通过网络提供本软件时，
+须按 AGPL-3.0 提供对应源代码。
+
+English
+-------
+This software is an unofficial fork / modified version of kanameishi
+(https://github.com/Lipomoea/kanameishi), licensed under AGPL-3.0.
+Modifications in this fork are likewise AGPL-3.0. See LICENSE.
+Not affiliated with or endorsed by the upstream authors.

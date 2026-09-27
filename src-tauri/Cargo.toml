@@ -1,0 +1,40 @@
+[package]
+name = "app"
+version = "0.1.0"
+description = "Kanameishi-Whews — unofficial AGPL-3.0 fork of kanameishi for WHEWS API"
+authors = ["狐狸吃鸭子力"]
+license = "AGPL-3.0-only"
+repository = ""
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0.1", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+log = "0.4"
+tauri = { version = "2.0.3", features = [ "protocol-asset", "tray-icon"] }
+tauri-plugin-log = "2.0.0-rc"
+tauri-plugin-notification = "2"
+tauri-plugin-fs = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-os = "2"
+tauri-plugin-http = "2"
+tauri-plugin-clipboard-manager = "2"
+
+# [target.'cfg(target_os = "macos")'.dependencies]
+# cocoa = "0.24"
+# objc = "0.2"
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-autostart = "2"
+tauri-plugin-window-state = "2"

@@ -1,0 +1,44 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "enables the default permissions",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "window-state:default",
+    "window-state:allow-save-window-state",
+    "window-state:allow-restore-state",
+    "autostart:default",
+    "autostart:allow-enable",
+    "autostart:allow-disable",
+    "autostart:allow-is-enabled",
+    "core:default",
+    "notification:default",
+    "notification:allow-request-permission",
+    "notification:allow-check-permissions",
+    "notification:allow-is-permission-granted",
+    "notification:allow-notify",
+    "core:window:allow-set-focus",
+    "core:window:allow-unminimize",
+    "core:window:allow-show",
+    "core:window:allow-hide",
+    "core:tray:default",
+    "core:app:allow-default-window-icon",
+    "core:path:allow-join",
+    "fs:allow-exists",
+    "fs:allow-appdata-read-recursive",
+    "fs:allow-appdata-write-recursive",
+    "shell:default",
+    "shell:allow-open",
+    {
+      "identifier": "http:default",
+      "allow": [
+        { "url": "http://**" },
+        { "url": "https://**" }
+      ]
+    },
+    "http:allow-fetch",
+    "clipboard-manager:allow-write-text"
+  ]
+}
